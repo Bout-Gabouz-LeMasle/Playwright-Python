@@ -1,7 +1,7 @@
 from pytest_bdd import scenario, given, when, then, parsers
 from playwright.sync_api import expect
 import re
-from pages import HomePage
+from pages.home import HomePage
 
 @scenario('login.feature', 'Successful login with valid credentials')
 def test_home_bdd():

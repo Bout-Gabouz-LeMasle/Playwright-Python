@@ -15,7 +15,7 @@ __pycache__/
 # ------------------------------------------------
 # Ignore sensitive environment variables (passwords/logins)
 # NEVER commit this file to GitHub!
-##.env ##Must be activated for other project
+.env
 .env.local
 
 # ------------------------------------------------

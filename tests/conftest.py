@@ -1,7 +1,7 @@
 import os
 import pytest
 from playwright.sync_api import Page
-from pages.home_page import HomePage
+from pages.home.home_page import HomePage
 from dotenv import load_dotenv
 
 load_dotenv()

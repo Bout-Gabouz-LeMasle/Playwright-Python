@@ -16,8 +16,7 @@
 <a name="-english-documentation"></a>
 # 🇬🇧 English
 
-This repository contains an automated testing framework using **Playwright**, **Python**, and **pytest-bdd** (Gherkin syntax). It follows the **Page Object Model (POM)** design pattern for better maintainability and scalability.
-
+Scalable Test Automation Framework using **Python**, **Playwright**, and **pytest-bdd**. Features a modular **Feature-based POM** structure, **Allure** reporting, and secure `.env` configuration
 ## 🚀 Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -123,33 +122,34 @@ allure serve allure-results
 
 ```text
 Playwright-Python/
-├── locators/              # 📍 Element Selectors (POM separation)
-│   ├── __init__.py
-│   └── home_locators.py   # Locators for Home Page
+├── pages/                 # Page Object Model (Logic & Methods)
+│   ├── __init__.py        # Exposes modules
+│   ├── base_page.py       # Shared methods (Wrapper)
+│   │
+│   └── home/              # Home Feature Module
+│       ├── __init__.py    # Simplifies imports
+│       ├── home_page.py   # Home logic & actions
+│       └── home_locators.py # Home selectors
 │
-├── pages/                 # 📄 Page Object Model (Logic & Methods)
-│   ├── __init__.py
-│   ├── base_page.py       # Wrapper for common Playwright methods
-│   └── home_page.py       # Specific methods for Home Page
+├── tests/                 # Tests & Configuration
+│   ├── __init__.py        # Test package marker
+│   ├── conftest.py        # Pytest Fixtures (Setup/Teardown)
+│   ├── test_home_bdd.py   # Step Definitions
+│   │
+│   └── features/          # Gherkin Feature Files (BDD)
+│       └── login.feature  # Login scenarios
 │
-├── tests/                 # 🧪 Tests & Configuration
-│   ├── features/          # 🥒 Gherkin Feature Files (BDD)
-│   │   └── login.feature
-│   ├── __init__.py
-│   ├── conftest.py        # ⚙️ Pytest Fixtures (Setup/Teardown)
-│   └── test_home_bdd.py   # 🧩 Step Definitions
-│
-├── .env                   # 🔒 Secrets (Ignored by Git)
-├── .gitignore             # 🙈 Files to ignore
-├── pytest.ini             # 🛠️ Configuration (Base URL, BDD paths)
-├── README.md              # 📖 Documentation
-└── requirements.txt       # 📦 Dependencies list
+├── .env                   # Secrets (Ignored by Git)
+├── .gitignore             # Files to ignore
+├── pytest.ini             # Configuration (Base URL, BDD paths)
+├── README.md              # Documentation
+└── requirements.txt       # Dependencies list
 ```
 
 <a name="-documentation-en-français"></a>
 
 # 🇫🇷 Français
-Ce dépôt contient un framework d'automatisation de tests utilisant **Playwright**, **Python** et **pytest-bdd** (syntaxe Gherkin). Il suit le modèle de conception **Page Object Model (POM)** pour une meilleure maintenance et évolutivité.
+Framework d'automatisation de tests évolutif utilisant **Python**, **Playwright** et **pytest-bdd**. Intègre une structure **POM modulaire par fonctionnalité**, des rapports **Allure** et une configuration sécurisée via `.env`.
 
 ## 🚀 Prérequis
 Avant de commencer, assurez-vous d'avoir installé :
@@ -252,25 +252,26 @@ allure serve allure-results
 
 ```text
 Playwright-Python/
-├── locators/              # 📍 Sélecteurs d'éléments (Séparation POM)
-│   ├── __init__.py
-│   └── home_locators.py   # Sélecteurs pour la page d'accueil
-│
-├── pages/                 # 📄 Page Object Model (Logique & Méthodes)
-│   ├── __init__.py
-│   ├── base_page.py       # Wrapper pour les méthodes communes Playwright
-│   └── home_page.py       # Méthodes spécifiques à la page d'accueil
+├── pages/                 # 📄 Page Object Model (Logic & Methods / Logique & Méthodes)
+│   ├── __init__.py        # 🔗 Exposes modules / Expose les modules
+│   ├── base_page.py       # 🛠️ Shared methods (Wrapper) / Méthodes partagées
+│   │
+│   └── home/              # 🏠 Home Feature Module / Module de la page d'accueil
+│       ├── __init__.py    # 🔗 Simplifies imports / Simplifie les imports
+│       ├── home_page.py   # 🧠 Home logic & actions / Logique & actions de l'accueil
+│       └── home_locators.py # 📍 Home selectors / Sélecteurs de l'accueil
 │
 ├── tests/                 # 🧪 Tests & Configuration
-│   ├── features/          # 🥒 Fichiers Features Gherkin (BDD)
-│   │   └── login.feature
-│   ├── __init__.py
-│   ├── conftest.py        # ⚙️ Fixtures Pytest (Setup/Teardown)
-│   └── test_home_bdd.py   # 🧩 Définitions des étapes (Steps)
+│   ├── __init__.py        # 📦 Test package marker / Marqueur du package de test
+│   ├── conftest.py        # ⚙️ Pytest Fixtures (Setup/Teardown)
+│   ├── test_home_bdd.py   # 🧩 Step Definitions / Définitions des étapes
+│   │
+│   └── features/          # 🥒 Gherkin Feature Files (BDD)
+│       └── login.feature  # 📝 Login scenarios / Scénarios de connexion
 │
-├── .env                   # 🔒 Secrets (Ignoré par Git)
-├── .gitignore             # 🙈 Fichiers à ignorer
-├── pytest.ini             # 🛠️ Configuration (URL de base, chemins BDD)
+├── .env                   # 🔒 Secrets (Ignored by Git / Ignoré par Git)
+├── .gitignore             # 🙈 Files to ignore / Fichiers à ignorer
+├── pytest.ini             # 🛠️ Configuration (Base URL, BDD paths)
 ├── README.md              # 📖 Documentation
-└── requirements.txt       # 📦 Liste des dépendances
+└── requirements.txt       # 📦 Dependencies list / Liste des dépendances
 ```

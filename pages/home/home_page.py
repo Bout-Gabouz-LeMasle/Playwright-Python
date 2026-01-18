@@ -1,6 +1,6 @@
 from playwright.sync_api import Page
-from locators.home_locators import HomeLocators
-from .base_page import BasePage
+from .home_locators import HomeLocators
+from pages.base_page import BasePage
 
 class HomePage(BasePage):
 
