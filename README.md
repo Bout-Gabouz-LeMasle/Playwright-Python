@@ -6,10 +6,12 @@
 
 ---
 
-### 🌍 Language / Langue
-[🇬🇧 **English Documentation**](#-english-documentation) | [🇫🇷 **Documentation en Français**](#-documentation-en-français)
+<p align="center">
+<a href="#-english-documentation">🇬🇧 English</a> | <a href="#-documentation-en-français">🇫🇷 Français</a>
+</p>
 
 ---
+
 
 <a name="-english-documentation"></a>
 # 🇬🇧 English Documentation
