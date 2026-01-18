@@ -122,28 +122,28 @@ allure serve allure-results
 
 ```text
 Playwright-Python/
-├── pages/                 # Page Object Model (Logic & Methods)
-│   ├── __init__.py        # Exposes modules
-│   ├── base_page.py       # Shared methods (Wrapper)
+├── pages/                 # 📄 Page Object Model (Logic & Methods)
+│   ├── __init__.py        # 🔗 Exposes modules
+│   ├── base_page.py       # 🛠️ Shared methods (Wrapper)
 │   │
-│   └── home/              # Home Feature Module
-│       ├── __init__.py    # Simplifies imports
-│       ├── home_page.py   # Home logic & actions
-│       └── home_locators.py # Home selectors
+│   └── home/              # 🏠 Home Feature Module
+│       ├── __init__.py    # 🔗 Simplifies imports
+│       ├── home_page.py   # 🧠 Home logic & actions
+│       └── home_locators.py # 📍 Home selectors
 │
-├── tests/                 # Tests & Configuration
-│   ├── __init__.py        # Test package marker
-│   ├── conftest.py        # Pytest Fixtures (Setup/Teardown)
-│   ├── test_home_bdd.py   # Step Definitions
+├── tests/                 # 🧪 Tests & Configuration
+│   ├── __init__.py        # 📦 Test package marker
+│   ├── conftest.py        # ⚙️ Pytest Fixtures (Setup/Teardown)
+│   ├── test_home_bdd.py   # 🧩 Step Definitions
 │   │
-│   └── features/          # Gherkin Feature Files (BDD)
-│       └── login.feature  # Login scenarios
+│   └── features/          # 🥒 Gherkin Feature Files (BDD)
+│       └── login.feature  # 📝 Login scenarios
 │
-├── .env                   # Secrets (Ignored by Git)
-├── .gitignore             # Files to ignore
-├── pytest.ini             # Configuration (Base URL, BDD paths)
-├── README.md              # Documentation
-└── requirements.txt       # Dependencies list
+├── .env                   # 🔒 Secrets (Ignored by Git)
+├── .gitignore             # 🙈 Files to ignore
+├── pytest.ini             # 🛠️ Configuration (Base URL, BDD paths)
+├── README.md              # 📖 Documentation
+└── requirements.txt       # 📦 Dependencies list
 ```
 
 <a name="-documentation-en-français"></a>
