@@ -1,11 +1,48 @@
-# Python
-__pycache__/
-*.py[cod]
+# ------------------------------------------------
+# PYTHON & DEPENDENCIES
+# ------------------------------------------------
+# Ignore the virtual environment folder (heavy dependencies)
 venv/
-.env
+env/
 
-# Playwright / Pytest
-test-results/
-playwright-report/
-blob-report/
+# Ignore Python compiled files (generated automatically)
+__pycache__/
+*.pyc
+*.pyo
+
+# ------------------------------------------------
+# SECURITY & CONFIGURATION
+# ------------------------------------------------
+# Ignore sensitive environment variables (passwords/logins)
+# NEVER commit this file to GitHub!
+##.env ##Must be activated for other project
+.env.local
+
+# ------------------------------------------------
+# TESTING ARTIFACTS
+# ------------------------------------------------
+# Ignore Pytest cache and internal metrics
 .pytest_cache/
+
+# Ignore Playwright media (screenshots & videos from failed tests)
+test-results/
+screenshots/
+videos/
+
+# ------------------------------------------------
+# REPORTS
+# ------------------------------------------------
+# Ignore standard HTML reports
+report.html
+assets/
+
+# Ignore Allure raw data and generated reports
+allure-results/
+allure-report/
+allure-html/
+
+# ------------------------------------------------
+# IDE SETTINGS (Optional)
+# ------------------------------------------------
+# Ignore VS Code local settings
+.vscode/
