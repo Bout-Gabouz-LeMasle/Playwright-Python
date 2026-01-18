@@ -1,4 +1,4 @@
-# 🎭 Playwright BDD Automation Framework
+# 🎭 Playwright Python BDD Automation Framework
 
 ![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-Latest-green.svg)
@@ -14,7 +14,7 @@
 
 
 <a name="-english-documentation"></a>
-# 🇬🇧 English Documentation
+# 🇬🇧 English
 
 This repository contains an automated testing framework using **Playwright**, **Python**, and **pytest-bdd** (Gherkin syntax). It follows the **Page Object Model (POM)** design pattern for better maintainability and scalability.
 
@@ -118,9 +118,37 @@ python -m pytest --headed --alluredir=allure-results
 # 2. Generate and open the HTML report in your browser
 allure serve allure-results
 ```
+
+## 📂 Project Structure
+
+```text
+Playwright-Python/
+├── locators/              # 📍 Element Selectors (POM separation)
+│   ├── __init__.py
+│   └── home_locators.py   # Locators for Home Page
+│
+├── pages/                 # 📄 Page Object Model (Logic & Methods)
+│   ├── __init__.py
+│   ├── base_page.py       # Wrapper for common Playwright methods
+│   └── home_page.py       # Specific methods for Home Page
+│
+├── tests/                 # 🧪 Tests & Configuration
+│   ├── features/          # 🥒 Gherkin Feature Files (BDD)
+│   │   └── login.feature
+│   ├── __init__.py
+│   ├── conftest.py        # ⚙️ Pytest Fixtures (Setup/Teardown)
+│   └── test_home_bdd.py   # 🧩 Step Definitions
+│
+├── .env                   # 🔒 Secrets (Ignored by Git)
+├── .gitignore             # 🙈 Files to ignore
+├── pytest.ini             # 🛠️ Configuration (Base URL, BDD paths)
+├── README.md              # 📖 Documentation
+└── requirements.txt       # 📦 Dependencies list
+```
+
 <a name="-documentation-en-français"></a>
 
-# 🇫🇷 Documentation en Français
+# 🇫🇷 Français
 Ce dépôt contient un framework d'automatisation de tests utilisant **Playwright**, **Python** et **pytest-bdd** (syntaxe Gherkin). Il suit le modèle de conception **Page Object Model (POM)** pour une meilleure maintenance et évolutivité.
 
 ## 🚀 Prérequis
@@ -218,4 +246,31 @@ python -m pytest --headed --alluredir=allure-results
 
 # 2. Générer et ouvrir le rapport HTML dans le navigateur
 allure serve allure-results
+```
+
+## 📂 Structure du Projet
+
+```text
+Playwright-Python/
+├── locators/              # 📍 Sélecteurs d'éléments (Séparation POM)
+│   ├── __init__.py
+│   └── home_locators.py   # Sélecteurs pour la page d'accueil
+│
+├── pages/                 # 📄 Page Object Model (Logique & Méthodes)
+│   ├── __init__.py
+│   ├── base_page.py       # Wrapper pour les méthodes communes Playwright
+│   └── home_page.py       # Méthodes spécifiques à la page d'accueil
+│
+├── tests/                 # 🧪 Tests & Configuration
+│   ├── features/          # 🥒 Fichiers Features Gherkin (BDD)
+│   │   └── login.feature
+│   ├── __init__.py
+│   ├── conftest.py        # ⚙️ Fixtures Pytest (Setup/Teardown)
+│   └── test_home_bdd.py   # 🧩 Définitions des étapes (Steps)
+│
+├── .env                   # 🔒 Secrets (Ignoré par Git)
+├── .gitignore             # 🙈 Fichiers à ignorer
+├── pytest.ini             # 🛠️ Configuration (URL de base, chemins BDD)
+├── README.md              # 📖 Documentation
+└── requirements.txt       # 📦 Liste des dépendances
 ```
