@@ -1,9 +1,8 @@
 from playwright.sync_api import Page
 from locators.home_locators import HomeLocators
-from pages.common_page import CommonPage
+from .base_page import BasePage
 
-
-class HomePage(CommonPage):
+class HomePage(BasePage):
 
     def __init__(self, page: Page, url_conf: str):
         super().__init__(page)
@@ -20,9 +19,9 @@ class HomePage(CommonPage):
         
 
     def login(self, user, password):
-        self.get_Locator(HomeLocators.USER_INPUT).fill(user)
-        self.get_Locator(HomeLocators.PASS_INPUT).fill(password)
-        self.get_Locator(HomeLocators.LOGIN_BUTTON).click()
+        self.get_locator(HomeLocators.USER_INPUT).fill(user)
+        self.get_locator(HomeLocators.PASS_INPUT).fill(password)
+        self.get_locator(HomeLocators.LOGIN_BUTTON).click()
 
         self.wait_until_hidden(HomeLocators.LOGIN_BUTTON)
         self.validate_invisible(HomeLocators.LOGIN_BUTTON)
